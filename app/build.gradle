@@ -1,0 +1,132 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.arfideveloper.novelnest"
+        minSdk 21
+        targetSdk 31
+        versionCode 2
+        versionName "1.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        renderscriptTargetApi 21
+        renderscriptSupportModeEnabled true
+        android.buildFeatures.dataBinding = true
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'org.jetbrains:annotations:21.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'com.google.firebase:firebase-messaging:23.0.6'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'com.google.firebase:firebase-crashlytics-buildtools:2.9.1'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'org.aviran.cookiebar2:cookiebar2:1.1.4'
+    //dexter permissions
+    implementation 'com.karumi:dexter:6.2.3'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.github.bumptech.glide:annotations:4.12.0'
+    implementation('com.github.bumptech.glide:okhttp3-integration:4.12.0') { exclude group: 'glide-parent' }
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    implementation 'jp.wasabeef:glide-transformations:4.3.0'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.0'
+    //Material Spinner
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+    implementation 'androidx.navigation:navigation-fragment:2.5.0'
+    implementation 'androidx.navigation:navigation-ui:2.5.0'
+    // for otp view
+    implementation 'com.github.aabhasr1:OtpView:v1.1.2'
+    // progressLoader
+    implementation 'com.wang.avi:library:2.1.3'
+    implementation 'com.github.shasin89:NotificationBanner:1.1.5'
+    implementation 'me.gujun.android.taggroup:library:1.4@aar'
+    // Retrofit and Novels Api
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.facebook.android:facebook-android-sdk:7.1.0'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'org.ocpsoft.prettytime:prettytime:4.0.4.Final'
+    implementation 'com.github.smarteist:autoimageslider:1.4.0'
+    // Butter Knife Data Binding Library
+    implementation "com.jakewharton:butterknife:10.2.3"
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.2.3"
+    implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+    //GIF images
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.21'
+
+    // Pusher
+    implementation 'com.pusher:pusher-java-client:2.2.1'
+
+    // Zoom helper
+    implementation 'com.aghajari.zoomhelper:ZoomHelper:1.0.1'
+
+    androidTestImplementation "androidx.test.espresso:espresso-core:3.4.0"
+
+//    Material Spinner
+    implementation 'com.jaredrummler:material-spinner:1.3.1'
+//    Shimmer Effects
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+//    FireBaseNotification
+    implementation platform('com.google.firebase:firebase-bom:29.3.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging'
+
+//  image zoom & image cropper
+    implementation 'com.github.chrisbanes:PhotoView:2.1.3'
+    implementation 'com.jsibbold:zoomage:1.3.1'
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.github.barteksc:android-pdf-viewer:2.8.2'
+
+
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_bg_10dp_rounded"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:layout_marginHorizontal="@dimen/_10sdp"
+    android:elevation="@dimen/_2sdp"
+    android:paddingVertical="@dimen/_10sdp">
+
+    <RelativeLayout
+        android:id="@+id/layout_whatHappened"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_260sdp"
+        android:background="@drawable/white_bg_10dp_rounded"
+        android:layout_marginHorizontal="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/image_cncle"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:src="@drawable/ic_cncle" />
+        <ImageView
+            android:id="@+id/image_whatHappened"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_160sdp"
+            android:src="@drawable/what_happened"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/txt_whatHappened"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_whatHappened"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/rubik_regular"
+            android:text="What happened ? "
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+        <RelativeLayout
+            android:id="@+id/layout_reportNovelBtn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginHorizontal="@dimen/_15sdp"
+            android:background="@drawable/bg_btn_round"
+            android:layout_below="@id/txt_whatHappened"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/txt_reportNovel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/rubik_medium"
+                android:text="Report Novel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+            <Button
+                android:id="@+id/btn_reportNovel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

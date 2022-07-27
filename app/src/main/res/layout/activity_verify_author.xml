@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.VerifyAuthorActivity"
+    android:background="?backgroundColor">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@null"
+        android:isScrollContainer="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:id="@+id/layout_topBar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="?colorSecondaryVariant">
+
+                <RelativeLayout
+                    android:id="@+id/layout_backBtn"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_ic"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/text_todo"
+                        android:src="@drawable/ic_back_arrow_small"
+                        app:tint="@color/white" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_verifyAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Verify Author"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_profilePicture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_topBar">
+
+                <TextView
+                    android:id="@+id/text_step1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Step 1:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/text_profilePicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/text_step1"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Profile Picture"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_uploadPhoto"
+                android:layout_width="@dimen/_78sdp"
+                android:layout_height="@dimen/_78sdp"
+                android:layout_below="@id/layout_profilePicture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                >
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/image_uploadPic"
+                    android:layout_width="@dimen/_78sdp"
+                    android:layout_height="@dimen/_78sdp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/default_place_holder"
+                    app:civ_border_color="@color/AppColor"
+                    app:civ_border_width="1dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_changeImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_uploadPhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/white_bg_rounded_4dp"
+                android:elevation="@dimen/_2sdp"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/_15sdp"
+                android:paddingVertical="@dimen/_5sdp">
+
+                <TextView
+                    android:id="@+id/txt_changeImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Change Image"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_8sdp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/layout_personalInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_changeImage">
+
+                <TextView
+                    android:id="@+id/text_step2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Step 2:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/text_personalInformation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/text_step2"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Personal Information"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:id="@+id/input_FullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColorHint="?colorSecondaryVariant"
+                app:boxStrokeColor="@color/input_text_selector"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:hintTextColor="?colorSecondaryVariant"
+                app:endIconTint="?colorSecondaryVariant"
+                app:endIconMode="clear_text"
+                android:layout_below="@id/layout_personalInformation"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_authorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pen Name"
+                    android:fontFamily="@font/rubik_medium"
+                    android:inputType="textPersonName"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="?colorSecondaryVariant"
+
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/LoginTextInputLayoutStyle"
+                android:id="@+id/input_Email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColorHint="?colorSecondaryVariant"
+                app:boxStrokeColor="@color/input_text_selector"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:hintTextColor="?colorSecondaryVariant"
+                app:endIconTint="?colorSecondaryVariant"
+                app:endIconMode="clear_text"
+                android:layout_below="@id/input_FullName"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Personal Email"
+                    android:fontFamily="@font/rubik_medium"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="?colorSecondaryVariant"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_Uri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColorHint="?colorSecondaryVariant"
+                app:boxStrokeColor="@color/input_text_selector"
+                app:boxStrokeWidth="@dimen/_1sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                app:hintTextColor="?colorSecondaryVariant"
+                app:endIconTint="?colorSecondaryVariant"
+                app:endIconMode="clear_text"
+                android:layout_below="@id/input_Email"
+                style="@style/LoginTextInputLayoutStyle"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_portfolioUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Portfolio URL:"
+                    android:fontFamily="@font/rubik_medium"
+                    android:inputType="textEmailAddress"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="?colorSecondaryVariant"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+            <RelativeLayout
+                android:id="@+id/layout_uploadCNIC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_Uri">
+
+                <TextView
+                    android:id="@+id/text_step3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Step 3:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:id="@+id/text_uploadCNIC"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_toEndOf="@id/text_step3"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="Upload CNIC"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_CNIC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_below="@id/layout_uploadCNIC"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/layout_frontSide"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/btnSelectFrontSide"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/doted_rounded_10dp">
+
+                        <ImageView
+                            android:id="@+id/image_front"
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_23sdp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/text_todo"
+                            android:src="@drawable/ic_image_add_line" />
+
+                        <TextView
+                            android:id="@+id/text_frontPicture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/image_front"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="Front Picture"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_6sdp" />
+
+
+                    </RelativeLayout>
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/image_frontSide"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="@dimen/_10sdp"
+                        android:contentDescription="@string/text_todo"
+                        android:visibility="gone"
+                        />
+                    <RelativeLayout
+                        android:id="@+id/layout_imageCancelFront"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_grey_outline_rounded_100dp"
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:contentDescription="@string/text_todo"
+                            android:src="@drawable/cross" />
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_backSide"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/_10sdp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnSelectBackSide"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/doted_rounded_10dp">
+
+                        <ImageView
+                            android:id="@+id/image_back"
+                            android:layout_width="@dimen/_26sdp"
+                            android:layout_height="@dimen/_23sdp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/text_todo"
+                            android:src="@drawable/ic_image_add_line" />
+
+                        <TextView
+                            android:id="@+id/text_backPicture"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/image_back"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="Back Picture"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_6sdp" />
+
+                    </RelativeLayout>
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/image_backSide"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_70sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:scaleType="centerCrop"
+                        app:riv_corner_radius="@dimen/_10sdp"
+                        android:contentDescription="@string/text_todo"
+                        android:visibility="gone"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/layout_imageCancelBack"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_grey_outline_rounded_100dp"
+                        android:visibility="gone"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/cross"
+                            android:contentDescription="@string/text_todo"/>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:background="@drawable/bg_btn_round"
+                android:layout_below="@id/layout_CNIC"
+                android:layout_marginBottom="@dimen/_20sdp">
+
+                <TextView
+                    android:id="@+id/txt_uploadVerification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Upload for Verification"
+                    android:textSize="@dimen/_10sdp"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_uploadVerification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/shadow_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:background="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/loader"
+        android:visibility="gone" />
+
+</RelativeLayout>

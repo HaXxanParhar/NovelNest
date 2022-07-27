@@ -1,0 +1,2 @@
+password: Allahisone_1
+alias : key1

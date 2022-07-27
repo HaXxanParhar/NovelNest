@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">NovelNest</string>
+    <string name="open">Open</string>
+    <string name="loremIpsum">لوریم اِپسم پرنٹنگ اور ٹائپسیٹنگ انڈسٹری کا صرف ڈمی متن ہے۔ لوریم ایپسم 1500s کے بعد سے ہی انڈسٹری کا معیاری ڈمی متن رہا ہے ، جب ایک نامعلوم پرنٹر ٹائپ کی ایک گیلی لے کر اس کو ٹکرا کر ٹائپ نمونہ کی کتاب بناتا ہے۔ یہ نہ صرف پانچ صدیوں سے زندہ بچا ہے ، بلکہ الیکٹرانک ٹائپ سیٹنگ میں بھی چھلانگ لگا سکتا ہے ، جو لازمی طور پر بدلا ہوا ہے۔ 1960 کی دہائی میں لوریم ایپسم حصئوں پر مشتمل لیٹرسیٹ شیٹس کے اجراء کے ساتھ ہی ، اور حال ہی میں ایلڈس پیج میکر جیسے ڈیسک ٹاپ پبلشنگ سوفٹ ویئر کے ساتھ ، جس میں لوریم ایپسم کے ورژن شامل ہیں ، مقبول ہوا تھا۔</string>
+    <string name="closed">Closed</string>
+    <string name="text_todo">ToDo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

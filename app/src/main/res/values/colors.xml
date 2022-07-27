@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="pinkColor">#F52D56</color>
+    <color name="AppColor">#F52D56</color>
+    <color name="colorBackgroundLight">#FFFFFFFF</color>
+    <color name="colorBackgroundNight">#111820</color>
+    <color name="colorDark">#F52D56</color>
+    <color name="colorSkyBlue">#5B87E5</color>
+    <color name="colorLightBlue">#DCE5F6</color>
+    <color name="colorGrey">#FCFCFC</color>
+    <color name="red_Color">#EF0505</color>
+    <color name="doted_Color">#707070</color>
+    <color name="light_gray_Color">#F5F5F5</color>
+    <color name="dark_gray_Color">#ACACAC</color>
+    <color name="textColor">#373737</color>
+    <color name="black_off">#0C0C0C</color>
+    <color name="greyNight">#323131</color>
+    <color name="white_off">#F5F5F5</color>
+    <color name="editColor">#CBCBCB</color>
+    <color name="colorDoveGray">#707070</color>
+    <color name="grey">#a9a9a9</color>
+    <color name="lightGray">#E9F6FC</color>
+    <color name="editBg">#FAFAFA</color>
+    <color name="colorLightGray">#F5F5F5</color>
+</resources>

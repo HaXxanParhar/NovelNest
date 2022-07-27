@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?backgroundColor"
+    tools:context=".activities.UploadNovelActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isScrollContainer="true"
+        android:overScrollMode="never"
+        android:scrollbarThumbVertical="@null">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_topBar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:background="?colorSecondaryVariant">
+
+                <RelativeLayout
+                    android:id="@+id/layout_backBtn"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/back_ic"
+                        android:layout_width="@dimen/_16sdp"
+                        android:layout_height="@dimen/_16sdp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/text_todo"
+                        android:src="@drawable/ic_back_arrow_small"
+                        app:tint="@color/white" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text_uploadNovels"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Upload Novels"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_15sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_imageNovelMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_110sdp"
+                android:layout_below="@id/layout_topBar"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp">
+
+                <RelativeLayout
+                    android:id="@+id/layout_novelsEmptyPicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110sdp"
+                    android:background="@drawable/doted_rounded_10dp">
+
+                    <ImageView
+                        android:id="@+id/image_novels"
+                        android:layout_width="@dimen/_31sdp"
+                        android:layout_height="@dimen/_28sdp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/text_todo"
+                        android:src="@drawable/ic_pic_upload" />
+
+                    <TextView
+                        android:id="@+id/_text_novelPicture"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/image_novels"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="Upload Novel Photo"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_6sdp" />
+
+                </RelativeLayout>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image_novel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110sdp"
+                    android:contentDescription="@string/text_todo"
+                    android:padding="@dimen/_3sdp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:riv_corner_radius="@dimen/_10sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_imageCancel"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/bg_grey_outline_rounded_100dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/text_todo"
+                        android:src="@drawable/cross" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_novelName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:background="@drawable/bg_white_outline_app_color_rounded_4dp"
+                android:layout_below="@+id/layout_imageNovelMain"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:textColorHint="?colorSecondaryVariant"
+                app:endIconMode="clear_text"
+                app:endIconTint="?colorSecondaryVariant"
+                app:hintTextColor="?colorSecondaryVariant">
+
+                <EditText
+                    android:id="@+id/edit_novelName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/rubik_medium"
+                    android:hint="Novel Name"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:textColor="@color/AppColor"
+                    android:textColorHint="@color/AppColor"
+                    android:textSize="@dimen/_10sdp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/input_selectLanguage"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@id/layout_novelName"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/red_border_rounded_5dp">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/languageSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textSize="@dimen/_10sdp"
+                    app:ms_arrow_tint="@color/AppColor"
+                    app:ms_padding_left="@dimen/_10sdp"
+                    app:ms_text_color="?colorSecondaryVariant" />
+
+                <TextView
+                    android:id="@+id/text_selectLanguage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:text="Select Languages"
+                    android:textColor="?colorSecondaryVariant"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/input_selectCategory"
+                style="@style/LoginTextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@id/input_selectLanguage"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/red_border_rounded_5dp">
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:fontFamily="@font/rubik_medium"
+                    android:textSize="@dimen/_10sdp"
+                    app:ms_arrow_tint="@color/AppColor"
+                    app:ms_padding_left="@dimen/_10sdp"
+                    app:ms_text_color="?colorSecondaryVariant" />
+
+                <TextView
+                    android:id="@+id/text_selectCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:paddingStart="@dimen/_15sdp"
+                    android:text="Select Category"
+                    android:textColor="?colorSecondaryVariant"
+                    android:textSize="@dimen/_10sdp"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_pdfMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@id/input_selectCategory"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/image_pdfSelect"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/text_todo"
+                    android:src="@drawable/selected_radio_icon"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/image_pdfSelect"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Add Pdf File"
+                    android:textColor="@color/AppColor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_pdfFileSelect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_below="@id/layout_pdfMain"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:visibility="gone"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/layout_doted"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/doted_rounded_10dp"
+                    android:padding="@dimen/_3sdp"
+                    android:textColorHint="?colorSecondaryVariant">
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_iconPdf"
+                    android:layout_width="@dimen/_36sdp"
+                    android:layout_height="@dimen/_36sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:background="@drawable/bg_grey_rounded_5dp">
+
+                    <ImageView
+                        android:id="@+id/image_pdfIcon"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/text_todo"
+                        android:src="@drawable/ic_video_library"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/layout_selectPdf"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:background="@drawable/bg_app_rounded_4dp"
+                        >
+
+                        <TextView
+                            android:id="@+id/text_selectPdf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fontFamily="@font/rubik_medium"
+                            android:text="Select Pdf"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/layout_seePdf"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:background="@drawable/bg_white_outline_app_color_rounded_4dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:id="@+id/text_changePdf"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="See Pdf"
+                            android:textColor="@color/AppColor"
+                            android:textSize="@dimen/_10sdp"
+                            android:fontFamily="@font/rubik_medium"
+                            />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_descriptionMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_below="@id/layout_pdfFileSelect"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/image_descriptionSelect"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@string/text_todo"
+                    android:src="@drawable/unselect_radio_icon"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_toEndOf="@id/image_descriptionSelect"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Add Novel Text"
+                    android:textColor="@color/AppColor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_novelDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_descriptionMain"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:textColorHint="?colorSecondaryVariant"
+                android:background="@drawable/bg_white_outline_app_color_rounded_4dp"
+                app:endIconMode="clear_text"
+                app:endIconTint="?colorSecondaryVariant"
+                app:hintTextColor="?colorSecondaryVariant">
+
+                <EditText
+                    android:id="@+id/edit_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="start"
+                    android:hint="Novel Description"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine"
+                    android:minHeight="@dimen/_96sdp"
+                    android:overScrollMode="always"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingVertical="@dimen/_10sdp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:singleLine="false"
+                    android:textColor="?colorSecondaryVariant"
+                    android:textColorHint="@color/AppColor"
+                    android:textSize="@dimen/_10sdp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_btnUploadNovels"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_below="@+id/layout_novelDescription"
+                android:layout_marginHorizontal="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_30sdp"
+                android:background="@drawable/bg_btn_round">
+
+                <TextView
+                    android:id="@+id/text_uploadNovel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="Upload Novels"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp" />
+
+                <Button
+                    android:id="@+id/btn_uploadNovels"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/shadow_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.25"
+        android:background="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/loading"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/loader"
+        android:visibility="gone" />
+
+</RelativeLayout>
